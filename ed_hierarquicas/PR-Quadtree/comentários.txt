@@ -1,0 +1,20 @@
+O projeto foi estruturado em torno da implementação de uma PR-Quadtree, uma estrutura de dados hierárquica que divide recursivamente o espaço em quatro quadrantes. As principais estruturas de dados utilizadas incluem:
+
+Point2D: Uma classe simples para representar pontos no espaço bidimensional com coordenadas (x, y).
+RegNode: Uma estrutura que agrega um Point2D e um valor de dados associado. Essa composição permite que a árvore armazene não apenas a posição, mas também informações relevantes no ponto.
+PRQuadTreeNode: Representa um nó individual dentro da PR-Quadtree. Cada nó pode ser uma folha contendo dados ou um nó interno que aponta para até quatro filhos (quadrantes).
+PRQuadTree: A interface pública que encapsula a lógica da PR-Quadtree, fornecendo métodos para inserção, busca e consultas.
+Divisão de Módulos
+O código foi organizado em classes para modularidade e clareza. A separação em Point2D, RegNode, e PRQuadTreeNode segue o princípio de responsabilidade única, onde cada classe tem um propósito claro e definido. PRQuadTree atua como a interface de alto nível para interação com a estrutura de dados, abstraindo os detalhes internos de manipulação dos nós.
+
+Descrição das Rotinas e Funções
+Inserção: A inserção começa na raiz e percorre a árvore até encontrar a posição apropriada para o novo ponto. Se um nó excede sua capacidade, ele se subdivide em quatro quadrantes.
+Busca: A busca por um ponto específico navega pela árvore seguindo os quadrantes que contêm o ponto de interesse até chegar a uma folha ou concluir que o ponto não está presente.
+Consulta em Janela (Window Query): Para encontrar todos os pontos dentro de uma área retangular, a árvore é percorrida recursivamente, coletando pontos dos nós cujas áreas se sobrepõem à janela de consulta.
+Ponto mais próximo: Utiliza uma consulta em janela para encontrar pontos dentro de um limite de distância e depois calcula o ponto mais próximo entre os candidatos.
+Conclusão e Resultados Obtidos
+A implementação da PR-Quadtree em Python demonstrou ser uma solução eficiente e eficaz para o armazenamento e consulta de dados espaciais. A estrutura permite inserções e consultas rápidas, aproveitando a natureza hierárquica da árvore para limitar o número de comparações necessárias. A consulta em janela e a busca pelo ponto mais próximo são particularmente úteis em aplicações de geoprocessamento e jogos, onde tais operações são frequentes.
+
+As escolhas de design, como a modularidade e a clareza do código, facilitam a manutenção e o entendimento da estrutura. No entanto, vale ressaltar que a eficiência da PR-Quadtree depende muito da distribuição dos pontos no espaço; em casos extremos, como muitos pontos concentrados em uma pequena área, a árvore pode se tornar desequilibrada.
+
+Em conclusão, a PR-Quadtree implementada oferece um bom equilíbrio entre desempenho e facilidade de uso, com potencial para aplicações em diversos domínios que requerem manipulação eficiente de dados espaciais.

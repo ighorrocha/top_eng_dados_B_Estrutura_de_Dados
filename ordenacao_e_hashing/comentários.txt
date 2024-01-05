@@ -1,0 +1,29 @@
+No desenvolvimento deste projeto de Tabela Hash, o objetivo principal foi criar uma estrutura de dados eficiente para a manipulação e armazenamento de grandes conjuntos de dados, com foco específico na eliminação de duplicatas. Abaixo estão os principais aspectos do desenvolvimento:
+
+Estruturas de Dados Utilizadas:
+
+- Tabela Hash: A estrutura central é uma tabela hash, que oferece busca rápida, inserção e remoção de elementos. A tabela é implementada como uma lista de listas em Python para lidar com colisões através de encadeamento externo.
+- Listas: Python lists foram usadas para armazenar os pares chave-valor em cada índice da tabela hash, permitindo fácil acesso e manipulação dos dados.
+
+Divisão de Módulos:
+
+- O projeto é encapsulado em uma única classe, TabelaHash, facilitando a portabilidade e reutilização do código.
+- Funções separadas para hashing (funcao_hash_simples) e para a lógica de eliminação de duplicatas (eliminar_duplicatas) garantem que cada parte do código tenha uma responsabilidade clara e definida.
+
+Descrição das Rotinas e Funções:
+
+- __init__: Construtor da classe que inicializa a tabela hash.
+- inserir: Insere um novo par chave-valor na tabela, resolvendo colisões conforme necessário.
+- buscar: Busca por uma chave na tabela e retorna o valor associado, se existir.
+- remover: Remove um par chave-valor da tabela baseado na chave.
+- funcao_hash_simples: Uma função de hashing básica. Pode ser substituída por uma função mais complexa conforme a necessidade do domínio dos dados.
+- eliminar_duplicatas: Rotina específica para ler um arquivo CSV e usar a tabela hash para eliminar duplicatas.
+
+
+Conclusão sobre os Resultados Obtidos
+
+A implementação da Tabela Hash demonstrou ser uma estrutura de dados poderosa e flexível para o manuseio de grandes conjuntos de dados, especialmente para tarefas como a eliminação de duplicatas. O uso de listas para resolver colisões por encadeamento externo provou ser eficaz e simples de implementar. No entanto, dependendo do tamanho e da natureza dos dados, outras técnicas de resolução de colisões ou funções de hashing podem ser mais adequadas para melhorar ainda mais o desempenho.
+
+A capacidade de definir a função de hashing e o método de resolução de colisões torna a tabela hash adaptável a diferentes tipos de dados e requisitos de aplicação. Em termos de resultados, o uso de uma tabela hash para eliminar duplicatas em datasets oferece uma melhoria significativa em termos de eficiência em comparação com métodos baseados em ordenação, especialmente conforme o tamanho do dataset aumenta.
+
+Em resumo, este projeto demonstrou que, com uma implementação cuidadosa, as tabelas hash são ferramentas extremamente úteis e eficientes no mundo do processamento e análise de dados.
