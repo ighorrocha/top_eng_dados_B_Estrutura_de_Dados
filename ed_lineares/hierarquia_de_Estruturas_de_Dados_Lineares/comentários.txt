@@ -1,0 +1,19 @@
+Durante o desenvolvimento desse projeto de Estruturas de Dados Lineares em Python, o foco foi criar uma implementação clara, concisa e orientada a objetos de algumas das estruturas de dados mais fundamentais.
+
+- Sequência Indexada (IndexedSequence): Utilizamos uma lista interna do Python para simular uma array dinâmico. Esta estrutura permite inserções e remoções em qualquer índice, ajustando automaticamente o tamanho e realocando elementos conforme necessário.
+
+- Lista Encadeada Simples (SimpleLinkedList): Implementamos uma lista encadeada do zero, utilizando uma classe Node para representar cada elemento. Esta estrutura permite inserções e remoções com eficiência em qualquer posição, especialmente no início da lista.
+
+- Pilha (Stack): Construímos a pilha utilizando a Lista Encadeada Simples como base, aproveitando sua eficiência em operações de inserção e remoção no início da lista, que correspondem às operações de push e pop em uma pilha.
+
+- Fila Simples (Queue): Implementamos a fila usando o módulo collections.deque do Python, que fornece uma implementação eficiente de uma fila duplamente encadeada, ideal para operações rápidas no início e no final da fila.
+
+
+O código foi estruturado em classes distintas, cada uma representando uma estrutura de dados específica. A classe abstrata LinearStructure define a interface comum a todas as estruturas, garantindo consistência e facilitando a expansão futura do projeto.
+Cada estrutura de dados implementa métodos para inserção (insert), remoção (remove) e recuperação (retrieve), além de métodos auxiliares como length, is_empty e is_full.
+A implementação de cada método foi cuidadosamente planejada para respeitar as características e eficiências específicas de cada estrutura de dados. Por exemplo, inserções e remoções em uma lista encadeada são feitas reajustando os ponteiros dos nós adjacentes, enquanto na sequência indexada, isso envolve deslocar elementos.
+
+Os resultados obtidos com este projeto demonstram a flexibilidade e o poder da Programação Orientada a Objetos em Python para a implementação de estruturas de dados complexas. As estruturas criadas são não apenas funcionais mas também extensíveis, permitindo que sejam base para trabalhos futuros ou projetos educacionais mais amplos.
+
+Este projeto também serve como uma excelente revisão das características e usos de cada uma das estruturas de dados implementadas, reforçando conceitos importantes como a eficiência das operações, o gerenciamento de memória e a importância do planejamento cuidadoso na escolha da estrutura de dados correta para cada tipo de tarefa.
+
