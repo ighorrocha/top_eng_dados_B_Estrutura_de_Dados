@@ -1,0 +1,22 @@
+Durante o desenvolvimento deste projeto de Árvore Binária de Busca (ABB), focamos em criar uma estrutura eficiente para armazenamento e busca de registros. Optamos por uma abordagem orientada a objetos para garantir a modularidade e reusabilidade do código. Abaixo estão alguns pontos chave sobre o desenvolvimento:
+
+Estruturas de Dados Utilizadas:
+
+- Registro (TAD): Essa classe abstrata representa cada registro contendo informações como CPF, nome e data de nascimento. A escolha por uma classe permite a fácil expansão para incluir mais campos conforme necessário.
+- Nó da Árvore Binária: Cada nó contém um objeto Registro e referências para seus nós filhos esquerdo e direito. Isso permite a construção da estrutura hierárquica da ABB.
+- Árvore Binária de Busca: A classe central do projeto, onde implementamos métodos para inserção e busca. A estrutura permite buscas eficientes, aproveitando as propriedades da ABB.
+- Estrutura de Dados Linear (EDL): Uma lista simples foi utilizada para armazenar os registros. Isso facilita a recuperação de registros completos após a busca na ABB.
+Divisão de Módulos:
+
+O projeto foi dividido em módulos distintos, cada um responsável por uma parte específica do sistema. Isso inclui módulos para a definição de registros, a implementação da árvore e a manipulação da EDL. Essa separação promove a clareza e facilita a manutenção.
+Descrição das Rotinas e Funções:
+
+Inserção: Adiciona um novo registro tanto na ABB quanto na EDL, garantindo a ordem na árvore e o acesso rápido através da lista.
+Busca: Realiza uma busca eficiente pela chave (CPF) na ABB, retornando o registro completo da EDL.
+Percurso em Ordem: Uma função auxiliar para visualizar todos os registros de forma ordenada, útil para verificar a integridade da árvore.
+
+A implementação da Árvore Binária de Busca mostrou-se uma solução robusta e eficiente para o gerenciamento de registros. A utilização da ABB permitiu buscas rápidas, aproveitando sua natureza hierárquica para minimizar o número de comparações necessárias. A escolha de Python como linguagem facilitou o desenvolvimento devido à sua sintaxe clara e estruturas de dados incorporadas.
+
+Consegui entender  como estruturas de dados hierárquicas funcionam e como elas podem ser aplicadas para melhorar a eficiência de operações comuns em sistemas de gerenciamento de dados. A modularidade e a clareza do código garantem que ele possa ser facilmente expandido e mantido, o que é essencial para qualquer aplicação real.
+
+Os resultados obtidos foram extremamente positivos, demonstrando que a Árvore Binária de Busca é uma estrutura de dados poderosa para o gerenciamento eficiente de informações em um ambiente controlado. Este projeto serve como uma excelente base para sistemas mais complexos e aplicações reais, onde a eficiência na busca e inserção de dados é crucial.
