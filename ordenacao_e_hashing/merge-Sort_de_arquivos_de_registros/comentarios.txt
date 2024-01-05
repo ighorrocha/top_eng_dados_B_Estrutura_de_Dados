@@ -1,0 +1,22 @@
+Para a implementação do programa de ordenação externa usando o algoritmo Merge-Sort, foram adotadas as seguintes estruturas de dados e abordagens:
+
+- Estrutura de Dados CSV: Utilizamos arquivos CSV como entrada e saída. Os registros no CSV contêm informações fictícias de alunos, incluindo nome, idade e DRE. A chave de ordenação é o DRE.
+
+- Buffer em Memória Principal: Implementamos um buffer em memória principal para carregar partes dos registros do arquivo CSV, permitindo o processamento de registros que não cabem completamente na memória principal. O tamanho do buffer pode ser configurado na variável BUFFER_SIZE.
+
+- Divisão em Runs: O programa divide o arquivo CSV em "runs", que são pedaços menores dos registros. Cada run é ordenada individualmente e gravada em um arquivo temporário.
+
+- Merge Externo: A fase de merge externo é realizada usando uma fila de prioridade (heap) para combinar os registros de todas as runs ordenadas em um único arquivo final. Isso garante que os registros sejam mesclados de acordo com a chave de ordenação.
+
+- Funções e Modularização: O código foi modularizado em funções para facilitar a manutenção e o entendimento. As funções incluem divide_runs, sort_run, merge_runs, e write_run, cada uma com uma responsabilidade específica no processo de ordenação externa.
+
+
+Conclusão:
+
+O programa de ordenação externa Merge-Sort desenvolvido demonstra uma implementação eficiente e escalável para ordenar grandes conjuntos de dados que não cabem na memória principal. O uso de uma abordagem de divisão e conquista com runs intermediários torna o processo de ordenação possível, mesmo para conjuntos de dados muito grandes.
+
+O programa pode ser personalizado de acordo com o tamanho da memória principal disponível e o tamanho do arquivo de entrada. Ele é altamente flexível e pode ser usado para ordenar arquivos CSV com diferentes chaves de ordenação e tamanhos.
+
+Os resultados obtidos são eficazes em termos de ordenação, garantindo que os registros sejam ordenados corretamente de acordo com a chave de ordenação especificada. No entanto, a eficiência do programa dependerá do tamanho da memória principal e da quantidade de dados a serem processados. A utilização de uma fila de prioridade na fase de merge externo contribui para um processo eficiente de mesclagem de registros.
+
+Em resumo, este programa oferece uma solução robusta para a ordenação de grandes conjuntos de dados e pode ser adaptado para várias aplicações que envolvem ordenação de registros em memória secundária.
