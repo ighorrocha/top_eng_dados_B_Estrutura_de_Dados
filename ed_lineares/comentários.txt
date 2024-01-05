@@ -1,0 +1,12 @@
+Neste projeto, a principal estrutura de dados implementada foi a Pilha, uma estrutura linear que segue o princípio Last In, First Out (LIFO). A Pilha foi construída para armazenar elementos genéricos, definidos pelo tipo de dado passado durante a instanciação. Sua principal aplicação foi no algoritmo de Preenchimento de Região, onde a pilha armazenava coordenadas (tuplas) representando posições na matriz de caracteres.
+
+O projeto foi consolidado em um único módulo Python (main.py), mantendo a simplicidade e focando na demonstração dos conceitos. A classe Pilha e a função de preenchimento de região coexistem no mesmo arquivo, mas são claramente separadas, permitindo fácil identificação e manutenção.
+
+
+- Pilha: Classe que implementa a estrutura de dados pilha. Contém métodos para empilhar (empilha), desempilhar (desempilha), verificar se está vazia (pilha_esta_vazia) ou cheia (pilha_esta_cheia), trocar os dois elementos do topo (troca) e verificar o tamanho da pilha (tamanho). Além disso, possui tratamento de exceções para garantir o uso correto da pilha.
+
+- preenche_regiao: Função que utiliza a pilha para realizar o preenchimento de região em uma matriz de caracteres. Empilha a posição inicial e, iterativamente, preenche a região, empilhando posições adjacentes até que não haja mais posições para preencher ou até atingir as bordas da região.
+
+A implementação da Pilha em Python demonstrou ser eficiente e versátil para o problema de Preenchimento de Região. A estrutura de dados permitiu um controle detalhado sobre o processo de preenchimento, garantindo que todas as áreas conectadas fossem preenchidas corretamente. O uso de exceções para gerenciar erros de pilha cheia, vazia ou tipos de dados incorretos proporcionou robustez ao código.
+
+Além disso, a abordagem iterativa para o preenchimento da região provou ser eficaz e evitou problemas com limites de recursão que poderiam ocorrer em abordagens recursivas diretas, especialmente em matrizes grandes. A capacidade de personalizar a matriz e as posições iniciais permite que o algoritmo seja facilmente testado e adaptado para diferentes cenários.
